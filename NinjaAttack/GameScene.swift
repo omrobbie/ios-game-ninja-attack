@@ -45,10 +45,18 @@ class GameScene: SKScene {
     
     physicsWorld.gravity = .zero
     physicsWorld.contactDelegate = self
+    
+    let backgroundMusic = SKAudioNode(fileNamed: "background-music-aac.caf")
+    
+    backgroundMusic.autoplayLooped = true
+
+    addChild(backgroundMusic)
   }
   
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     guard let touch = touches.first else {return}
+    
+    run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
     
     let touchLocation = touch.location(in: self)
     let projectile = SKSpriteNode(imageNamed: "projectile")
