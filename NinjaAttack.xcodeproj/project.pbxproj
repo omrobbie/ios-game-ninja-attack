@@ -15,7 +15,7 @@
 		D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F2071F4A9144005CD714 /* Main.storyboard */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
-		FC87AA9D21B3793F00A5B58C /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC87AA9C21B3793F00A5B58C /* GameOverScene.swift */; };
+		FC87AA9F21B3825D00A5B58C /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC87AA9E21B3825D00A5B58C /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = NinjaAttack/Assets.xcassets; sourceTree = "<group>"; };
 		D2A5F20F1F4A9144005CD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = NinjaAttack/Info.plist; sourceTree = "<group>"; };
 		D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = NinjaAttack/AppDelegate.swift; sourceTree = "<group>"; };
-		FC87AA9C21B3793F00A5B58C /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		FC87AA9E21B3825D00A5B58C /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameOverScene.swift; path = NinjaAttack/GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 				D2A5F20F1F4A9144005CD714 /* Info.plist */,
 				AFD63F882036497100E08C66 /* GameScene.swift */,
 				AFD63F862036493600E08C66 /* GameViewController.swift */,
-				FC87AA9C21B3793F00A5B58C /* GameOverScene.swift */,
+				FC87AA9E21B3825D00A5B58C /* GameOverScene.swift */,
 			);
 			name = NinjaAttack;
 			sourceTree = "<group>";
@@ -164,8 +164,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD63F892036497100E08C66 /* GameScene.swift in Sources */,
-				FC87AA9D21B3793F00A5B58C /* GameOverScene.swift in Sources */,
 				AFD63F872036493600E08C66 /* GameViewController.swift in Sources */,
+				FC87AA9F21B3825D00A5B58C /* GameOverScene.swift in Sources */,
 				D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

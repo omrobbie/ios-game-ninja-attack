@@ -28,8 +28,10 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
   let player = SKSpriteNode(imageNamed: "player")
+  
+  var monstersDestroyed = 0
   
   override func didMove(to view: SKView) {
     backgroundColor = SKColor.white
@@ -150,6 +152,15 @@ class GameScene: SKScene {
     
     projectile.removeFromParent()
     monster.removeFromParent()
+    
+    monstersDestroyed += 1
+    
+    if monstersDestroyed > 30 {
+      let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+      let gameOverScene = GameOverScene(size: self.size, won: true)
+      
+      self.view?.presentScene(gameOverScene, transition: reveal)
+    }
   }
 }
 
@@ -190,8 +201,4 @@ extension CGPoint {
   func normalized() -> CGPoint {
     return self / length()
   }
-}
-
-extension GameScene: SKPhysicsContactDelegate {
-  
 }
