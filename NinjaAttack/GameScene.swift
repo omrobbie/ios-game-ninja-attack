@@ -133,8 +133,17 @@ class GameScene: SKScene {
     let actionMove = SKAction.move(to: CGPoint(x: -monster.size.width / 2, y: actualY), duration: TimeInterval(actualDuration))
     let actionMoveDone = SKAction.removeFromParent()
     
-    monster.run(SKAction.sequence([actionMove, actionMoveDone]))
-  }
+    let loseAction = SKAction.run() { [weak self] in
+      guard let `self` = self else {return}
+      
+      let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+      let gameOverScene = GameOverScene(size: self.size, won: false)
+      
+      self.view?.presentScene(gameOverScene, transition: reveal)
+    }
+  
+    monster.run(SKAction.sequence([actionMove, loseAction, actionMoveDone]))
+}
   
   func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
     print("hit!")
